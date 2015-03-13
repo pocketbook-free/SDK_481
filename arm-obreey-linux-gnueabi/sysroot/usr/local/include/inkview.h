@@ -77,6 +77,7 @@ extern "C"
 #define STATEPATH USERDATA "/state"
 #define SYSTEMTHEMESPATH SYSTEMDATA "/themes"
 #define USERTHEMESPATH USERDATA "/themes"
+#define CUSTOMRESOURCEPATH USERDATA "/resources"
 #define GLOBALCONFIGFILE CONFIGPATH "/global.cfg"
 #define NETWORKCONFIGFILE CONFIGPATH "/network.cfg"
 #define TSCALDATA CONFIGPATH "/tsc.dat"
@@ -163,6 +164,8 @@ extern "C"
 #define DEMO_APP_PATH SYSTEMDATA "/bin/picviewer.app"
 #define DEMO_IMAGES_PATH USERDATA "/demo"
 
+#define CHECKUPDATE_INFO_PATH "/tmp/newsw.info"
+
 //#define DEFAULTFONT "LiberationSans"
 //#define DEFAULTFONTB "LiberationSans-Bold"
 //#define DEFAULTFONTI "LiberationSans-Italic"
@@ -238,6 +241,8 @@ extern const char * OBREEY_SOCIAL_COOKIES_PATH;
 #define MSG_TASK_GLOBALREQUEST  0x512
 #define MSG_TASK_SENDEVENTSYNC  0x513
 #define MSG_TASK_INITIALIZED	0x514
+#define MSG_TASK_PREVIOUS_INSTACK   0x515
+#define MSG_TASK_COPY_ACTIVE_FB	0x516
 
 #define MSG_DEVICEKEY         0xad0be01
 #define MSG_RESETKEY          0xad0be02
@@ -285,6 +290,8 @@ extern const char * OBREEY_SOCIAL_COOKIES_PATH;
 #define EVT_PREVPAGE 91
 #define EVT_NEXTPAGE 92
 #define EVT_OPENDIC  93
+#define EVT_CONTROL_PANEL_ABOUT_TO_OPEN  94
+
 
 #define EVT_PANEL_BLUETOOTH_A2DP 118
 
@@ -333,10 +340,14 @@ extern const char * OBREEY_SOCIAL_COOKIES_PATH;
 #define EVT_STOPSCAN     214
 #define EVT_STARTSCAN    215
 #define EVT_SCANSTOPPED  216
+#define EVT_POSTPONE_TIMED_POWEROFF  217
 
+#define EVT_NET_CONNECTED	256
+#define EVT_NET_DISCONNECTED 257
+#define EVT_NET_FOUND_NEW_FW 260
 
 #define ISKEYEVENT(x) ((x)>=25 && (x)<=28)
-#define ISPOINTEREVENT(x) (((x)>=29 && (x)<=31) || ((x)>=34 && (x)<=35) || (x)==44)
+#define ISPOINTEREVENT(x) (((x)>=29 && (x)<=31) || ((x)>=34 && (x)<=35) || (x)==44 || (x)==39)
 #define ISPANELEVENT(x) ((x)>=119 && (x) <= 132)
 
 #undef KEY_UP
@@ -459,6 +470,8 @@ extern const char * OBREEY_SOCIAL_COOKIES_PATH;
 #define KBD_NOUPDATE_AFTER_OPEN     0x40000
 #define KBD_NO_SELFCLOSE_ON_OK      0x80000
 #define KBD_CUSTOM_ENTER_KEY       0x100000
+#define KBD_MARKED_ENTER_KEY       0x200000
+
 
 #define ICON_INFORMATION 1
 #define ICON_QUESTION 2
@@ -585,6 +598,7 @@ extern const char * OBREEY_SOCIAL_COOKIES_PATH;
 #define REQ_OPENBOOK2	88
 #define REQ_FRONTLIGHT	89
 #define REQ_KEYUNLOCK	90
+#define REQ_HOURGLASS	91
 
 #define ALIGN_LEFT 1
 #define ALIGN_CENTER 2
@@ -602,13 +616,14 @@ extern const char * OBREEY_SOCIAL_COOKIES_PATH;
 #define TILE 8192
 #define TO_UPPER 16384
 
-#define FR_CLOSE             1
-#define FR_MOVEUP            2
-#define FR_MOVEDOWN          4
-#define FR_NOMARGIN 0x08000000
-#define FR_OVERLAP  0x10000000
-#define FR_HEADER   0x20000000
-#define FR_UPDATE   0x40000000
+#define FR_CLOSE               1
+#define FR_MOVEUP              2
+#define FR_MOVEDOWN            4
+#define FR_DICTIONARY 0x04000000
+#define FR_NOMARGIN   0x08000000
+#define FR_OVERLAP    0x10000000
+#define FR_HEADER     0x20000000
+#define FR_UPDATE     0x40000000
 
 #define FR_INFO     0x00010000
 #define FR_WARNING  0x00020000
@@ -744,6 +759,12 @@ typedef enum {
 	WPAPSK,
 } WIFI_SECURITY;
 
+typedef enum {
+	DISCONNECTED = 0,
+	CONNECTING,
+	CONNECTED,
+} NET_STATE;
+
 #define GSENSOR_OFF 0
 #define GSENSOR_ON 1
 #define GSENSOR_INTR 2
@@ -767,7 +788,7 @@ typedef enum {
  * TOUCHDRAGDEADZONE = R^2, R - radius of non sensitive touch zone relatively EVT_POINTERDOWN,
  * if dX^2+dY^2 by EVT_POINTERMOVE > TOUCHDRAGDEADZONE, than generate EVT_POINTERDRAG
  */
-#define TOUCHDRAGDEADZONE (HWC_LNI633 ? 324 : HWC_EP7A ? 330 : 200) // = R^2
+#define TOUCHDRAGDEADZONE (HWC_LNI633 ? 324 : (HWC_EP7A ? 330 : (HWC_DISPLAY_8INCH_1200 ? 900 : (HWC_DISPLAY_6INCH_758 ? 330 : 200)))) // = R^2
 
 // DEFAULT FONTS
 typedef enum
@@ -1180,6 +1201,7 @@ typedef struct bookinfo_s {
 	char* first_author;
 	int drm;
 	char *annotation;
+    char *lang;
 
 } bookinfo;
 
@@ -1310,15 +1332,24 @@ typedef struct taskinfo_s {
 
 } taskinfo;
 
+//input_dev_e is touch 'devtype'; describes a input device.
+enum input_dev_e {
+	UNKNOWN = 0,
+	CAPTOUCH,
+	DIGITIZER,
+
+	MAX_INPUT_DEV,
+};
+
 typedef struct iv_mtinfo_s {
 
     int active;
     int x;
     int y;
     int pressure;
-    int rsv_1;
+    enum input_dev_e devtype;
     int rsv_2;
-
+    long long timems;
 } iv_mtinfo;
 
 //scaned wifi ap information
@@ -1447,6 +1478,7 @@ void DrawPickOut(int x, int y, int w, int h, const char *key);
 void DrawPickOutEx(const irect *rect, const char *key);
 void DitherArea(int x, int y, int w, int h, int levels, int method);
 void DitherAreaQuick2Level(int dx, int dy, int dw, int dh);
+void QuickFloyd16Dither(unsigned char * buffer, int row_size, int left, int top, int width, int height);
 void Stretch(const unsigned char *src, int format, int sw, int sh, int scanline, int dx, int dy, int dw, int dh, int rotate);
 void StretchArea(const unsigned char *src, int format, int sx, int sy, int sw, int sh, int scanline, int dx, int dy, int dw, int dh, int rotate);
 void StretchAreaBW(const unsigned char *src, int format, int sx, int sy, int sw, int sh, int scanline, int dx, int dy, int dw, int dh);
@@ -1477,6 +1509,7 @@ void TransparentRect(irect rect, int percent);
 // Bitmap functions
 
 ibitmap *LoadBitmap(const char *filename);
+ibitmap *zLoadBitmap(void *zf, const char *filename);
 int SaveBitmap(const char *filename, ibitmap *bm);
 ibitmap *BitmapFromScreen(int x, int y, int w, int h);
 ibitmap *BitmapFromScreenR(int x, int y, int w, int h, int rotate);
@@ -1521,6 +1554,7 @@ ifont *GetFont();
 void DrawString(int x, int y, const char *s);
 void DrawStringR(int x, int y, const char *s);
 int TextRectHeight(int width, const char *s, int flags);
+int TextRectHeightEx(int width, int height, const char *s, int flags);
 int MinimalTextRectWidth(int w, const char *s);
 char *DrawTextRect(int x, int y, int w, int h, const char *s, int flags);
 char *DrawTextRect2(irect *rect, const char *s);
@@ -1543,6 +1577,7 @@ void PartialUpdate(int x, int y, int w, int h);
 void PartialUpdateBlack(int x, int y, int w, int h);
 void PartialUpdateBW(int x, int y, int w, int h);
 void PartialUpdateHQ(int x, int y, int w, int h);
+void PartialUpdateDU4(int x, int y, int w, int h);
 void DynamicUpdate(int x, int y, int w, int h);
 void DynamicUpdateBW(int x, int y, int w, int h);
 
@@ -1601,6 +1636,11 @@ int GetListHeaderLevel();
 void OpenDummyList(const char *title, const ibitmap *background, char *text, iv_listhandler hproc);
 char **EnumKeyboards();
 void LoadKeyboard(const char *kbdlang);
+/**
+ * @brief GetKeyboardFlags is thread safe in device environment
+ * @return flags with wich keyboard was opened
+ */
+int GetKeyboardFlags();
 void OpenKeyboard(const char *title, char *buffer, int maxlen, int flags, iv_keyboardhandler hproc);
 void OpenCustomKeyboard(const char *filename, const char *title, char *buffer, int maxlen, int flags, iv_keyboardhandler hproc);
 void CloseKeyboard();
@@ -1785,6 +1825,14 @@ iv_fbinfo *GetTaskFramebufferInfo (int task);
 void ReleaseTaskFramebuffer(icanvas *fb);
 void iv_wait_task_activation(int timeout);
 
+/*
+ * Copy framebuffer from currently active task (mpc->activetask)
+ * to framebuffer of task has called this function.
+ * It might be used in hidden or background tasks,
+ * when need send Dialog or Message to user on background of currently active task.
+ */
+void CopyActiveFb(void);
+
 /* Auto control for frontlight brigthness */
 int hw_is_frontlight_auto_supported(void);
 void hw_set_frontlight_auto_enabled(int enable);
@@ -1856,9 +1904,9 @@ char ** EnumLanguages();
 void LoadLanguage(const char *lang);
 void AddTranslation(const char *label, const char *trans);
 // return translation for current language, do translate on english
-char *GetCurrentLangText(const char *s);
-char *GetLangText(const char *s);
-char *GetLangTextF(const char *s, ...);
+const char *GetCurrentLangText(const char *s);
+const char *GetLangText(const char *s);
+const char *GetLangTextF(const char *s, ...);
 void SetRTLBook(int rtl);
 int IsRTL();  // depends only on the system language
 int IsBookRTL();	// can be overwritten by application
@@ -2043,6 +2091,7 @@ int PageSnapshot();
 int RestoreStartupLogo();
 int QueryTouchpanel();
 void CalibrateTouchpanel();
+void CalibrateTouchDevice(enum input_dev_e TouchDevice);
 void OpenCalendar();
 int StartSoftwareUpdate();
 int HavePowerForSoftwareUpdate();
@@ -2128,6 +2177,7 @@ void NetErrorMessage(int e);
 int GetA2dpStatus();
 void SetPort(int port);
 iv_mtinfo *GetTouchInfo();
+iv_mtinfo *GetTouchInfoI(unsigned int index);
 int QueryHeadphone();
 char * wpa_passphrase(char * ssid, char * passphrase);
 
@@ -2144,11 +2194,34 @@ int convert_to_utf(const char *src, char *dest, int destsize, const char *enc);
 int utf2ucs(const char *s, unsigned short *us, int maxlen);
 int utf2ucs4(const char *s, unsigned int *us, int maxlen);
 int ucs2utf(const unsigned short *us, char *s, int maxlen);
-int utfcasecmp(const char *sa, const char *sb);
-int utfncasecmp(const char *sa, const char *sb, int n);
-char *utfcasestr(const char *sa, const char *sb);
-void utf_toupper(char *s);
-void utf_tolower(char *s);
+int utf_toupper_ext(char* src, int src_len, char** dest, int* dest_len);
+int utf_tolower_ext(char* src, int src_len, char** dest, int* dest_len);
+
+#define CHANGE_CASE_ON_STACK(buf, f) { \
+    char* CHANGE_CASE_ON_STACK_dest_ = NULL; \
+    int CHANGE_CASE_ON_STACK_dest_len_ = 0; \
+    f((buf), -1, &CHANGE_CASE_ON_STACK_dest_, &CHANGE_CASE_ON_STACK_dest_len_); \
+    strncpy((buf), CHANGE_CASE_ON_STACK_dest_, sizeof(buf) - 1); \
+    (buf)[sizeof(buf) - 1]  = 0; \
+    free(CHANGE_CASE_ON_STACK_dest_); \
+}
+
+#define UTF_TO_UPPER_ON_STACK(buf) CHANGE_CASE_ON_STACK(buf, utf_toupper_ext)
+#define UTF_TO_LOWER_ON_STACK(buf) CHANGE_CASE_ON_STACK(buf, utf_tolower_ext)
+
+#define CHANGE_CASE_ON_HEAP(buf, f) { \
+    char* CHANGE_CASE_ON_HEAP_dest_ = NULL; \
+    int CHANGE_CASE_ON_HEAP_dest_len_ = 0; \
+    int res = f((buf), -1, &CHANGE_CASE_ON_HEAP_dest_, &CHANGE_CASE_ON_HEAP_dest_len_); \
+    if (res >= 0) { \
+        free(buf); \
+        (buf) = CHANGE_CASE_ON_HEAP_dest_; \
+    } \
+}
+
+#define UTF_TO_UPPER_ON_HEAP(buf) CHANGE_CASE_ON_HEAP(buf, utf_toupper_ext)
+#define UTF_TO_LOWER_ON_HEAP(buf) CHANGE_CASE_ON_HEAP(buf, utf_tolower_ext)
+
 void md5sum(const unsigned char *data, int len, unsigned char *digest);
 int base64_encode(const unsigned char *in, int len, char *out);
 int base64_decode(const char *in, unsigned char *out, int len);
@@ -2159,7 +2232,7 @@ int move_file_with_af(const char *src, const char *dst);
 int unlink_file_with_af(const char *name);
 int recurse_action(const char *path, iv_recurser proc, void *data, int creative, int this_too);
 void LeaveInkViewMain();
-int IsInRect(int x, int y, irect * rect);
+int IsInRect(int x, int y, const irect * rect);
 void MD5PartFile(const char *src, unsigned char *r);
 unsigned int crc32hash(const char *buf, unsigned int len);
 // dialog show on the screen
@@ -2308,6 +2381,17 @@ network_interface_array *GetNetDNS (void);
  */
 int GetNetSignalQuality (void);
 
+/*
+ * Returns current connection state
+ */
+NET_STATE GetNetState(void);
+
+/*
+ * Returns last connection error which are described NET_E* defines.
+ * If connection is established that returns NET_OK.
+ */
+int GetLastNetConnectionError(void);
+
 #define iverror(x...) do { \
 	extern char *program_invocation_name; \
 	fprintf(stderr,"[%i : %s] ",getpid(),program_invocation_name); \
@@ -2337,6 +2421,11 @@ int CoverCachePut(COVERCACHE_STORAGES storage, const char *file_path, ibitmap *b
  * Return uncompressed ibitmap from specified storage for specified file.
  */
 ibitmap *CoverCacheGet(COVERCACHE_STORAGES storage, const char *file_path);
+
+/*
+ * Postpone timed poweroff to let device long-running background tasks
+ */
+int PostponeTimedPoweroff(void);
 
 char *arc_filename(const char *name);
 
