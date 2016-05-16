@@ -23,7 +23,7 @@
     <meta name="viewport" content="width=1020">
     
     
-    <title>SDK_481/libinkview.so at 5.11 · pocketbook/SDK_481</title>
+    <title>SDK_481/libinkview.so at 5.12 · pocketbook/SDK_481</title>
     <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="GitHub">
     <link rel="fluid-icon" href="https://github.com/fluidicon.png" title="GitHub">
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
@@ -43,7 +43,7 @@
       <meta name="browser-stats-url" content="https://api.github.com/_private/browser/stats">
     <meta name="browser-errors-url" content="https://api.github.com/_private/browser/errors">
     <link rel="assets" href="https://assets-cdn.github.com/">
-    <link rel="web-socket" href="wss://live.github.com/_sockets/MTE1MDc3MTpjNzE2ODBjMGM3YTk3MTg0NjdjNmYzNDBmNjM2ZWUyMjoxMTcwNzRkYWU2ODc2ODBhZDlkMWJmMGExMmQyZTM4MzczZDVkNzIxYzk3YTQyN2JiZmVhZTE1MDFiZGRiYzlh--ac49595baaeb6f74988bedfabd99c9296be958b0">
+    <link rel="web-socket" href="wss://live.github.com/_sockets/MTE1MDc3MTpjNzE2ODBjMGM3YTk3MTg0NjdjNmYzNDBmNjM2ZWUyMjplYzllNWY4NmYwNmNiMDJjYjE0MmFhMjMzNWUyZDU0MWI4YzIzMDVkZTZhZWJkMDM3MWNiM2M2YmQxZTM2Zjhj--2daf9b96960ba99ced0ac80833f0616054e8d7a0">
     <meta name="pjax-timeout" content="1000">
     <link rel="sudo-modal" href="/sessions/sudo_modal">
 
@@ -55,7 +55,7 @@
 <meta name="google-site-verification" content="ZzhVyEFwb7w3e0-uOTltm8Jsck2F5StVihD0exw2fsA">
     <meta name="google-analytics" content="UA-3769691-2">
 
-<meta content="collector.githubapp.com" name="octolytics-host" /><meta content="github" name="octolytics-app-id" /><meta content="3E50B9B3:2D0A:69AE977:57398951" name="octolytics-dimension-request_id" /><meta content="1150771" name="octolytics-actor-id" /><meta content="pocketbook-free" name="octolytics-actor-login" /><meta content="f5dd73c3b798ea304bdd564943616acf6262fbd02d34855323ec135cc9e185da" name="octolytics-actor-hash" />
+<meta content="collector.githubapp.com" name="octolytics-host" /><meta content="github" name="octolytics-app-id" /><meta content="3E50B9B3:7A03:86F597E:573989DD" name="octolytics-dimension-request_id" /><meta content="1150771" name="octolytics-actor-id" /><meta content="pocketbook-free" name="octolytics-actor-login" /><meta content="f5dd73c3b798ea304bdd564943616acf6262fbd02d34855323ec135cc9e185da" name="octolytics-actor-hash" />
 <meta content="/&lt;user-name&gt;/&lt;repo-name&gt;/blob/show" data-pjax-transient="true" name="analytics-location" />
 
 
@@ -68,7 +68,7 @@
     <meta name="user-login" content="pocketbook-free">
 
         <meta name="expected-hostname" content="github.com">
-      <meta name="js-proxy-site-detection-payload" content="NjM5MjA4NjA5MzI0MWQyZDBjOTMxMDVlZjFmYzAxMjI2NjU5NWE3NTc2OGRlOGY3ODhhZjU0OTI5MDRmYmU4MHx7InJlbW90ZV9hZGRyZXNzIjoiNjIuODAuMTg1LjE3OSIsInJlcXVlc3RfaWQiOiIzRTUwQjlCMzoyRDBBOjY5QUU5Nzc6NTczOTg5NTEiLCJ0aW1lc3RhbXAiOjE0NjMzODg0OTd9">
+      <meta name="js-proxy-site-detection-payload" content="ZDg0NWNjY2U0YThiNjkxZGJiMjdhMDYzZDUyYzUwYjEzNThmNmJiYmNmYWVmOTExZWEwODNjODY5NDk4MGNkYnx7InJlbW90ZV9hZGRyZXNzIjoiNjIuODAuMTg1LjE3OSIsInJlcXVlc3RfaWQiOiIzRTUwQjlCMzo3QTAzOjg2RjU5N0U6NTczOTg5REQiLCJ0aW1lc3RhbXAiOjE0NjMzODg2NDB9">
 
 
       <link rel="mask-icon" href="https://assets-cdn.github.com/pinned-octocat.svg" color="#4078c0">
@@ -84,10 +84,10 @@
   <meta name="go-import" content="github.com/pocketbook/SDK_481 git https://github.com/pocketbook/SDK_481.git">
 
   <meta content="3964889" name="octolytics-dimension-user_id" /><meta content="pocketbook" name="octolytics-dimension-user_login" /><meta content="39066514" name="octolytics-dimension-repository_id" /><meta content="pocketbook/SDK_481" name="octolytics-dimension-repository_nwo" /><meta content="true" name="octolytics-dimension-repository_public" /><meta content="true" name="octolytics-dimension-repository_is_fork" /><meta content="27865587" name="octolytics-dimension-repository_parent_id" /><meta content="pocketbook-free/SDK_481" name="octolytics-dimension-repository_parent_nwo" /><meta content="27865587" name="octolytics-dimension-repository_network_root_id" /><meta content="pocketbook-free/SDK_481" name="octolytics-dimension-repository_network_root_nwo" />
-  <link href="https://github.com/pocketbook/SDK_481/commits/5.11.atom" rel="alternate" title="Recent Commits to SDK_481:5.11" type="application/atom+xml">
+  <link href="https://github.com/pocketbook/SDK_481/commits/5.12.atom" rel="alternate" title="Recent Commits to SDK_481:5.12" type="application/atom+xml">
 
 
-      <link rel="canonical" href="https://github.com/pocketbook/SDK_481/blob/5.11/arm-obreey-linux-gnueabi/sysroot/usr/local/lib/libinkview.so" data-pjax-transient>
+      <link rel="canonical" href="https://github.com/pocketbook/SDK_481/blob/5.12/arm-obreey-linux-gnueabi/sysroot/usr/local/lib/libinkview.so" data-pjax-transient>
   </head>
 
 
@@ -223,7 +223,7 @@
             Settings
           </a>
 
-          <!-- </textarea> --><!-- '"` --><form accept-charset="UTF-8" action="/logout" class="logout-form" data-form-nonce="ca336d974bda4d188328a0c09d096cf6071c63bb" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="9fS0n5qSmx2fv0pH4GcDgtFOzk/ClSJCUpuLsGxx9QAfKmFKuKG9ZZs3t8uQNMLRCokVAm5+GJYuWMq++N5qdg==" /></div>
+          <!-- </textarea> --><!-- '"` --><form accept-charset="UTF-8" action="/logout" class="logout-form" data-form-nonce="ca336d974bda4d188328a0c09d096cf6071c63bb" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="R31FaoFv35CVxhbE30HO4tNQQYuQ2meWxGxOJkWTabnAZdCmVQ+JFRgKYD1tZa1rzwgBVRPGWweutxxSMdzYog==" /></div>
             <button class="dropdown-item dropdown-signout" data-ga-click="Header, sign out, icon:logout">
               Sign out
             </button>
@@ -260,7 +260,7 @@
 <ul class="pagehead-actions">
 
   <li>
-        <!-- </textarea> --><!-- '"` --><form accept-charset="UTF-8" action="/notifications/subscribe" class="js-social-container" data-autosubmit="true" data-form-nonce="ca336d974bda4d188328a0c09d096cf6071c63bb" data-remote="true" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="u7OcJOSt5dwV7K/lVnHH7k3UUk3n+sQJPiMSjnmu2EmoxWBASIE76+TEiCzAGCeMoT6+h3JgqhnpGKx4yv8yoA==" /></div>      <input class="form-control" id="repository_id" name="repository_id" type="hidden" value="39066514" />
+        <!-- </textarea> --><!-- '"` --><form accept-charset="UTF-8" action="/notifications/subscribe" class="js-social-container" data-autosubmit="true" data-form-nonce="ca336d974bda4d188328a0c09d096cf6071c63bb" data-remote="true" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="rynSpeP2rARwmZlI3lVbgMMBnFm90r3l25Ovc7bv9qXYtOnDUXkteFxcCPJtT4FXOn4PNvPEcfT+w1upuX8Peg==" /></div>      <input class="form-control" id="repository_id" name="repository_id" type="hidden" value="39066514" />
 
         <div class="select-menu js-menu-container js-select-menu">
           <a href="/pocketbook/SDK_481/subscription"
@@ -335,7 +335,7 @@
     
   <div class="js-toggler-container js-social-container starring-container ">
 
-    <!-- </textarea> --><!-- '"` --><form accept-charset="UTF-8" action="/pocketbook/SDK_481/unstar" class="starred" data-form-nonce="ca336d974bda4d188328a0c09d096cf6071c63bb" data-remote="true" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="sj9GLcjwo8o+ZJMBO3Q+oZ+KQINQk0RF1JA3FeRxgn03T/uigWsYHCZJtgwNPBNOX14Q2EI8+enD5RAaME3x7A==" /></div>
+    <!-- </textarea> --><!-- '"` --><form accept-charset="UTF-8" action="/pocketbook/SDK_481/unstar" class="starred" data-form-nonce="ca336d974bda4d188328a0c09d096cf6071c63bb" data-remote="true" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="U4J9tUXxGyQPDS5Xn3hl/9cpexbK71hnqXIgL923OuLdzfaWv6YJ9BlwvqpgFYyFHNBN8Cbz9vBhtocdU9Nrxw==" /></div>
       <button
         class="btn btn-sm btn-with-count js-toggler-target"
         aria-label="Unstar this repository" title="Unstar pocketbook/SDK_481"
@@ -347,7 +347,7 @@
           1
         </a>
 </form>
-    <!-- </textarea> --><!-- '"` --><form accept-charset="UTF-8" action="/pocketbook/SDK_481/star" class="unstarred" data-form-nonce="ca336d974bda4d188328a0c09d096cf6071c63bb" data-remote="true" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="FbSaFRaJaBkV+6yEqSQKzNXapid9GpWwDJ49WEJ41Z8HJwqIRDS/0RI01TOCpxCIWLU0oskZLteWB5qK0lHe2Q==" /></div>
+    <!-- </textarea> --><!-- '"` --><form accept-charset="UTF-8" action="/pocketbook/SDK_481/star" class="unstarred" data-form-nonce="ca336d974bda4d188328a0c09d096cf6071c63bb" data-remote="true" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="CKOeVGDLSPZmOJjyxvUn76xMVCF8keWNIGF6CvA5x9XzrFQkY2hnkyGNgs7xwvqlBDB3LUDtqCQReLgKEEUjlw==" /></div>
       <button
         class="btn btn-sm btn-with-count js-toggler-target"
         aria-label="Star this repository" title="Star pocketbook/SDK_481"
@@ -363,7 +363,7 @@
   </li>
 
   <li>
-          <!-- </textarea> --><!-- '"` --><form accept-charset="UTF-8" action="/pocketbook/SDK_481/fork" class="btn-with-count" data-form-nonce="ca336d974bda4d188328a0c09d096cf6071c63bb" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="tOH5pTrPf9UPKF3sQxbgDxKsDx/eMZYOYNGN0aY9S5OAfn/CkXCCRgu2m4Bh3B5GgumxJJ75GdQ8xpcL9a+hxw==" /></div>
+          <!-- </textarea> --><!-- '"` --><form accept-charset="UTF-8" action="/pocketbook/SDK_481/fork" class="btn-with-count" data-form-nonce="ca336d974bda4d188328a0c09d096cf6071c63bb" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="6Lp2aPSx/n08kFc7u6WTb86BTtyLR91Zbm9BMrHEPaE6S9xcZwFVk4K1wvB4bnaazByZ7tlOfWCYOJv0PqeHqA==" /></div>
             <button
                 type="submit"
                 class="btn btn-sm btn-with-count"
@@ -401,7 +401,7 @@
      data-pjax="#js-repo-pjax-container">
 
   <span itemscope itemtype="http://schema.org/ListItem" itemprop="itemListElement">
-    <a href="/pocketbook/SDK_481/tree/5.11" aria-selected="true" class="js-selected-navigation-item selected reponav-item" data-hotkey="g c" data-selected-links="repo_source repo_downloads repo_commits repo_releases repo_tags repo_branches /pocketbook/SDK_481/tree/5.11" itemprop="url">
+    <a href="/pocketbook/SDK_481/tree/5.12" aria-selected="true" class="js-selected-navigation-item selected reponav-item" data-hotkey="g c" data-selected-links="repo_source repo_downloads repo_commits repo_releases repo_tags repo_branches /pocketbook/SDK_481/tree/5.12" itemprop="url">
       <svg aria-hidden="true" class="octicon octicon-code" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path d="M9.5 3l-1.5 1.5 3.5 3.5L8 11.5l1.5 1.5 4.5-5L9.5 3zM4.5 3L0 8l4.5 5 1.5-1.5L2.5 8l3.5-3.5L4.5 3z"></path></svg>
       <span itemprop="name">Code</span>
       <meta itemprop="position" content="1">
@@ -440,18 +440,18 @@
 
     
 
-<a href="/pocketbook/SDK_481/blob/2e9fa26d2da17635b2562597c8593fcd33235867/arm-obreey-linux-gnueabi/sysroot/usr/local/lib/libinkview.so" class="hidden js-permalink-shortcut" data-hotkey="y">Permalink</a>
+<a href="/pocketbook/SDK_481/blob/d21f8320346afd0c5393b1f751ff972b9109a745/arm-obreey-linux-gnueabi/sysroot/usr/local/lib/libinkview.so" class="hidden js-permalink-shortcut" data-hotkey="y">Permalink</a>
 
-<!-- blob contrib key: blob_contributors:v21:dc268c6ec4f45e9c9d386523dba2c56e -->
+<!-- blob contrib key: blob_contributors:v21:e345ae7cef6e6dc7a1c9cf76207098ac -->
 
 <div class="file-navigation js-zeroclipboard-container">
   
 <div class="select-menu branch-select-menu js-menu-container js-select-menu left">
   <button class="btn btn-sm select-menu-button js-menu-target css-truncate" data-hotkey="w"
-    title="5.11"
+    title="5.12"
     type="button" aria-label="Switch branches or tags" tabindex="0" aria-haspopup="true">
     <i>Branch:</i>
-    <span class="js-select-button css-truncate-target">5.11</span>
+    <span class="js-select-button css-truncate-target">5.12</span>
   </button>
 
   <div class="select-menu-modal-holder js-menu-content js-navigation-container" data-pjax aria-hidden="true">
@@ -533,7 +533,7 @@
                 5.9
               </span>
             </a>
-            <a class="select-menu-item js-navigation-item js-navigation-open selected"
+            <a class="select-menu-item js-navigation-item js-navigation-open "
                href="/pocketbook/SDK_481/blob/5.11/arm-obreey-linux-gnueabi/sysroot/usr/local/lib/libinkview.so"
                data-name="5.11"
                data-skip-pjax="true"
@@ -543,7 +543,7 @@
                 5.11
               </span>
             </a>
-            <a class="select-menu-item js-navigation-item js-navigation-open "
+            <a class="select-menu-item js-navigation-item js-navigation-open selected"
                href="/pocketbook/SDK_481/blob/5.12/arm-obreey-linux-gnueabi/sysroot/usr/local/lib/libinkview.so"
                data-name="5.12"
                data-skip-pjax="true"
@@ -582,7 +582,7 @@
 </div>
 
   <div class="btn-group right">
-    <a href="/pocketbook/SDK_481/find/5.11"
+    <a href="/pocketbook/SDK_481/find/5.12"
           class="js-pjax-capture-input btn btn-sm"
           data-pjax
           data-hotkey="t">
@@ -591,11 +591,11 @@
     <button aria-label="Copy file path to clipboard" class="js-zeroclipboard btn btn-sm zeroclipboard-button tooltipped tooltipped-s" data-copied-hint="Copied!" type="button">Copy path</button>
   </div>
   <div class="breadcrumb js-zeroclipboard-target">
-    <span class="repo-root js-repo-root"><span class="js-path-segment"><a href="/pocketbook/SDK_481/tree/5.11"><span>SDK_481</span></a></span></span><span class="separator">/</span><span class="js-path-segment"><a href="/pocketbook/SDK_481/tree/5.11/arm-obreey-linux-gnueabi"><span>arm-obreey-linux-gnueabi</span></a></span><span class="separator">/</span><span class="js-path-segment"><a href="/pocketbook/SDK_481/tree/5.11/arm-obreey-linux-gnueabi/sysroot"><span>sysroot</span></a></span><span class="separator">/</span><span class="js-path-segment"><a href="/pocketbook/SDK_481/tree/5.11/arm-obreey-linux-gnueabi/sysroot/usr"><span>usr</span></a></span><span class="separator">/</span><span class="js-path-segment"><a href="/pocketbook/SDK_481/tree/5.11/arm-obreey-linux-gnueabi/sysroot/usr/local"><span>local</span></a></span><span class="separator">/</span><span class="js-path-segment"><a href="/pocketbook/SDK_481/tree/5.11/arm-obreey-linux-gnueabi/sysroot/usr/local/lib"><span>lib</span></a></span><span class="separator">/</span><strong class="final-path">libinkview.so</strong>
+    <span class="repo-root js-repo-root"><span class="js-path-segment"><a href="/pocketbook/SDK_481/tree/5.12"><span>SDK_481</span></a></span></span><span class="separator">/</span><span class="js-path-segment"><a href="/pocketbook/SDK_481/tree/5.12/arm-obreey-linux-gnueabi"><span>arm-obreey-linux-gnueabi</span></a></span><span class="separator">/</span><span class="js-path-segment"><a href="/pocketbook/SDK_481/tree/5.12/arm-obreey-linux-gnueabi/sysroot"><span>sysroot</span></a></span><span class="separator">/</span><span class="js-path-segment"><a href="/pocketbook/SDK_481/tree/5.12/arm-obreey-linux-gnueabi/sysroot/usr"><span>usr</span></a></span><span class="separator">/</span><span class="js-path-segment"><a href="/pocketbook/SDK_481/tree/5.12/arm-obreey-linux-gnueabi/sysroot/usr/local"><span>local</span></a></span><span class="separator">/</span><span class="js-path-segment"><a href="/pocketbook/SDK_481/tree/5.12/arm-obreey-linux-gnueabi/sysroot/usr/local/lib"><span>lib</span></a></span><span class="separator">/</span><strong class="final-path">libinkview.so</strong>
   </div>
 </div>
 
-<include-fragment class="commit-tease" src="/pocketbook/SDK_481/contributors/5.11/arm-obreey-linux-gnueabi/sysroot/usr/local/lib/libinkview.so">
+<include-fragment class="commit-tease" src="/pocketbook/SDK_481/contributors/5.12/arm-obreey-linux-gnueabi/sysroot/usr/local/lib/libinkview.so">
   <div>
     Fetching contributors&hellip;
   </div>
@@ -610,8 +610,8 @@
   <div class="file-actions">
 
     <div class="btn-group">
-      <a href="/pocketbook/SDK_481/raw/5.11/arm-obreey-linux-gnueabi/sysroot/usr/local/lib/libinkview.so" class="btn btn-sm " id="raw-url">Raw</a>
-      <a href="/pocketbook/SDK_481/commits/5.11/arm-obreey-linux-gnueabi/sysroot/usr/local/lib/libinkview.so" class="btn btn-sm " rel="nofollow">History</a>
+      <a href="/pocketbook/SDK_481/raw/5.12/arm-obreey-linux-gnueabi/sysroot/usr/local/lib/libinkview.so" class="btn btn-sm " id="raw-url">Raw</a>
+      <a href="/pocketbook/SDK_481/commits/5.12/arm-obreey-linux-gnueabi/sysroot/usr/local/lib/libinkview.so" class="btn btn-sm " rel="nofollow">History</a>
     </div>
 
         <a class="btn-octicon tooltipped tooltipped-nw"
@@ -621,7 +621,7 @@
             <svg aria-hidden="true" class="octicon octicon-device-desktop" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path d="M15 2H1c-0.55 0-1 0.45-1 1v9c0 0.55 0.45 1 1 1h5.34c-0.25 0.61-0.86 1.39-2.34 2h8c-1.48-0.61-2.09-1.39-2.34-2h5.34c0.55 0 1-0.45 1-1V3c0-0.55-0.45-1-1-1z m0 9H1V3h14v8z"></path></svg>
         </a>
 
-        <!-- </textarea> --><!-- '"` --><form accept-charset="UTF-8" action="/pocketbook/SDK_481/delete/5.11/arm-obreey-linux-gnueabi/sysroot/usr/local/lib/libinkview.so" class="inline-form" data-form-nonce="ca336d974bda4d188328a0c09d096cf6071c63bb" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="KCaS0SRzoeJkMhbj+ZVhBVC3SNi0wRLuLeIRf48bJYeVxccNN5n7/7MDZQ9TtSeEDv2aq75VPP2aiISZ2lraMw==" /></div>
+        <!-- </textarea> --><!-- '"` --><form accept-charset="UTF-8" action="/pocketbook/SDK_481/delete/5.12/arm-obreey-linux-gnueabi/sysroot/usr/local/lib/libinkview.so" class="inline-form" data-form-nonce="ca336d974bda4d188328a0c09d096cf6071c63bb" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="XrvU38LSX6MtjmU2//sKOAwmLUJmZ8yDjdqdlr56XQmETmYNCK7Z7tWKXB5vncVsHst/fWhwa3ET9n+eocBrUg==" /></div>
           <button class="btn-octicon btn-octicon-danger tooltipped tooltipped-nw" type="submit"
             aria-label="Delete the file in your fork of this project" data-disable-with>
             <svg aria-hidden="true" class="octicon octicon-trashcan" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path d="M10 2H8c0-0.55-0.45-1-1-1H4c-0.55 0-1 0.45-1 1H1c-0.55 0-1 0.45-1 1v1c0 0.55 0.45 1 1 1v9c0 0.55 0.45 1 1 1h7c0.55 0 1-0.45 1-1V5c0.55 0 1-0.45 1-1v-1c0-0.55-0.45-1-1-1z m-1 12H2V5h1v8h1V5h1v8h1V5h1v8h1V5h1v9z m1-10H1v-1h9v1z"></path></svg>
@@ -629,7 +629,7 @@
 </form>  </div>
 
   <div class="file-info">
-    814 KB
+    823 KB
   </div>
 </div>
 
@@ -637,7 +637,7 @@
 
   <div itemprop="text" class="blob-wrapper data type-text">
       <div class="image">
-          <a href="/pocketbook/SDK_481/blob/5.11/arm-obreey-linux-gnueabi/sysroot/usr/local/lib/libinkview.so?raw=true">View Raw</a>
+          <a href="/pocketbook/SDK_481/blob/5.12/arm-obreey-linux-gnueabi/sysroot/usr/local/lib/libinkview.so?raw=true">View Raw</a>
       </div>
   </div>
 
@@ -676,7 +676,7 @@
       <svg aria-hidden="true" class="octicon octicon-mark-github" height="24" version="1.1" viewBox="0 0 16 16" width="24"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59 0.4 0.07 0.55-0.17 0.55-0.38 0-0.19-0.01-0.82-0.01-1.49-2.01 0.37-2.53-0.49-2.69-0.94-0.09-0.23-0.48-0.94-0.82-1.13-0.28-0.15-0.68-0.52-0.01-0.53 0.63-0.01 1.08 0.58 1.23 0.82 0.72 1.21 1.87 0.87 2.33 0.66 0.07-0.52 0.28-0.87 0.51-1.07-1.78-0.2-3.64-0.89-3.64-3.95 0-0.87 0.31-1.59 0.82-2.15-0.08-0.2-0.36-1.02 0.08-2.12 0 0 0.67-0.21 2.2 0.82 0.64-0.18 1.32-0.27 2-0.27 0.68 0 1.36 0.09 2 0.27 1.53-1.04 2.2-0.82 2.2-0.82 0.44 1.1 0.16 1.92 0.08 2.12 0.51 0.56 0.82 1.27 0.82 2.15 0 3.07-1.87 3.75-3.65 3.95 0.29 0.25 0.54 0.73 0.54 1.48 0 1.07-0.01 1.93-0.01 2.2 0 0.21 0.15 0.46 0.55 0.38C13.71 14.53 16 11.53 16 8 16 3.58 12.42 0 8 0z"></path></svg>
 </a>
     <ul class="site-footer-links">
-      <li>&copy; 2016 <span title="0.08984s from github-fe116-cp1-prd.iad.github.net">GitHub</span>, Inc.</li>
+      <li>&copy; 2016 <span title="0.13583s from github-fe158-cp1-prd.iad.github.net">GitHub</span>, Inc.</li>
         <li><a href="https://github.com/site/terms" data-ga-click="Footer, go to terms, text:terms">Terms</a></li>
         <li><a href="https://github.com/site/privacy" data-ga-click="Footer, go to privacy, text:privacy">Privacy</a></li>
         <li><a href="https://github.com/security" data-ga-click="Footer, go to security, text:security">Security</a></li>
